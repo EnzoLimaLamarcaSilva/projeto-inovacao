@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Solar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../Js/prog.js"defer></script>
+</head>
+<body>
+
+<header>
+    <nav class="menu">
+        <a href="../index.html">Principal</a>
+        <a href="./desafio.html">Cálculo</a>
+        <a href="./ranking.html">Sobre</a>
+        <a href="./sobre.html">Desenvolvimento</a>
+    </nav>
+</header>
+
+<main class="conteudo">
+
+    <h1>Calculadora de Economia</h1>
+
+    <div class="card">
+        <input type="number" id="consumo" placeholder="Consumo mensal (kWh)">
+        <input type="number" id="valorConta" placeholder="Valor da conta (R$)">
+        <input type="number" id="custoSistema" placeholder="Custo do sistema solar (R$)">
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
+    </div>
+
+</main>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
