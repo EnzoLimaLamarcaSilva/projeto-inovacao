@@ -1,65 +1,114 @@
-body {
+/* ===== RESET ===== */
+* {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#f39c12,#8e44ad);
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* ===== FUNDO (mantém suas cores) ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #e18a13, #8e2de2);
+    min-height: 100vh;
+}
+
+/* ===== MENU ===== */
 .menu {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 15px;
-    background: rgba(0,0,0,0.25);
+    gap: 40px;
+    padding: 18px;
+    background: rgba(0,0,0,0.15);
 }
 
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .menu a:hover {
-    text-decoration: underline;
+    opacity: 0.7;
 }
 
+/* ===== CONTAINER PRINCIPAL ===== */
+.container,
 .conteudo {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    padding: 40px 20px;
+    max-width: 900px;   /* limita largura */
+    margin: 0 auto;     /* centraliza */
+    padding: 40px 25px;
+    text-align: center; /* centraliza textos */
 }
 
+/* ===== TÍTULOS ===== */
 h1 {
-    font-size: 40px;
-    margin-bottom: 25px;
+    font-size: 42px;
+    margin-bottom: 30px;
 }
 
+h2 {
+    font-size: 26px;
+    margin: 30px 0 15px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+/* ===== PARÁGRAFOS ===== */
 p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
-.card {
-    background: rgba(0,0,0,0.3);
-    padding: 20px;
-    border-radius: 12px;
+/* ===== LISTAS CENTRALIZADAS ===== */
+ul {
+    list-style-position: inside;
+    text-align: center;
+    margin-top: 10px;
 }
 
-input, textarea {
+/* ===== SEÇÕES ===== */
+section {
+    margin-bottom: 40px;
+}
+
+/* ===== IMAGEM CENTRAL ===== */
+.imagem img {
     width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+}
+
+.legenda {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ===== INPUTS / BOTÕES ===== */
+input, textarea, button {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
     padding: 10px;
-    margin: 8px 0;
-    border-radius: 6px;
+    border-radius: 8px;
     border: none;
 }
 
-button, .btn {
-    background: #1abc9c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: none;
+button {
+    background: white;
+    color: #8e2de2;
+    font-weight: bold;
     cursor: pointer;
-    text-decoration: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
