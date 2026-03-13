@@ -1,19 +1,27 @@
-function calcular() {
-    const consumo = Number(document.getElementById("consumo").value);
-    const valorConta = Number(document.getElementById("valorConta").value);
-    const custoSistema = Number(document.getElementById("custoSistema").value);
+function calcular(){
 
-    if (!consumo || !valorConta || !custoSistema) {
-        alert("Preencha todos os campos!");
-        return;
+    let tempoPlanejado = Number(document.getElementById("tempoPlanejado").value)
+    let tempoParado = Number(document.getElementById("tempoParado").value)
+    let produzidas = Number(document.getElementById("produzidas").value)
+    let defeito = Number(document.getElementById("defeito").value)
+    
+    let tempoOperacao = tempoPlanejado - tempoParado
+    
+    let disponibilidade = (tempoOperacao / tempoPlanejado) * 100
+    
+    let pecasBoas = produzidas - defeito
+    
+    let qualidade = (pecasBoas / produzidas) * 100
+    
+    let eficiencia = (disponibilidade * qualidade) / 100
+    
+    document.getElementById("disponibilidade").innerText =
+    "Disponibilidade: " + disponibilidade.toFixed(2) + "%"
+    
+    document.getElementById("qualidade").innerText =
+    "Qualidade: " + qualidade.toFixed(2) + "%"
+    
+    document.getElementById("eficiencia").innerText =
+    "Eficiência da Produção: " + eficiencia.toFixed(2) + "%"
+    
     }
-
-    const economiaMensal = valorConta * 0.9;
-    const economiaAnual = economiaMensal * 12;
-    const retorno = custoSistema / economiaMensal;
-
-    document.getElementById("resultado").innerHTML =
-        `Economia mensal: R$ ${economiaMensal.toFixed(2)} <br>
-        Economia anual: R$ ${economiaAnual.toFixed(2)} <br>
-        Retorno do investimento: ${retorno.toFixed(1)} meses`;
-}
